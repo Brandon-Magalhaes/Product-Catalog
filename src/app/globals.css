@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+}
+
+.bg-cream {
+  background-color: #1a202c; /* Fundo preto */
+}
+
+.text-cream {
+  color: #f7fafc; /* Texto branco */
+}
+
+.text-black {
+  color: #000000; /* Texto preto */
+}
+
+.text-almost-black {
+  color: #333333; /* Texto cinza quase preto */
+}
+
+.card {
+  @apply flex flex-col h-full;
+}
+
+.card-image {
+  @apply w-full h-48 object-cover;
+}
+
+.card-content {
+  @apply flex flex-col flex-grow text-almost-black; /* Aplicando a cor de texto cinza quase preto */
+}
