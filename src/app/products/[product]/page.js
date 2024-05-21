@@ -56,28 +56,28 @@ export default function Product() {
             <h1 className="text-2xl sm:text-3xl font-bold mb-4">
               {product.title}
             </h1>
-            <p className="my-4">
+            <div className="my-4">
               <div className="text-gray-700 text-center sm:text-start">
                 {product.description}
               </div>
-            </p>
-            <p className="text-gray-700 mb-2">
+            </div>
+            <div className="text-gray-700 mb-2">
               <span className="text-base font-semibold mb-2">
                 ${product.price}
               </span>
-            </p>
-            <p>
+            </div>
+            <div>
               <span className="text-gray-600">Category: </span>
               <span className="font-bold">{product.category}</span>
-            </p>
-            <p>
+            </div>
+            <div>
               <span className="text-gray-600">Rating: </span>
               <span className="font-bold">{product.rating.rate}</span>
-            </p>
-            <p>
+            </div>
+            <div>
               <span className="text-gray-600">Count: </span>
               <span className="font-bold">{product.rating.count}</span>
-            </p>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-2 py-3">
