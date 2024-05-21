@@ -1,19 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* body {
-  @apply bg-black text-white;
-} */
-
-/* .text-almost-black {
-  color: #333333; 
-} */
-
-/* .card {
-  @apply flex flex-col h-full;
-} */
-
-/* .card-content {
-  @apply flex flex-col flex-grow text-almost-black;
-} */

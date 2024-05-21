@@ -15,18 +15,18 @@ export default function Header() {
   };
 
   return (
-    <div className="flex items-center justify-between w-full h-16 p-4 bg-gray-100 rounded-b-lg shadow-md     ">
+    <div className="flex items-center justify-between w-full h-16 p-4 bg-gray-100 rounded-b-lg shadow-md">
       <div className="flex items-center text-center justify-center">
         <div className="mr-2">
           <FaReact size={24} />
         </div>
-        <div className="hidden md:block text-xl font-bold text-black">
+        <div className="hidden sm:block text-xl font-bold text-black">
           NextJS
         </div>
       </div>
       <div className="flex items-center">
         <button
-          className="md:hidden text-gray-800 focus:outline-none"
+          className="sm:hidden text-gray-800 focus:outline-none"
           onClick={toggleMenu}
         >
           {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -44,26 +44,24 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                {/* Adicionei um novo item de menu aqui */}
                 <a
-                  href="/nova-pagina"
+                  href="/"
                   className="block px-2 py-1 rounded-lg hover:bg-gray-200"
                   onClick={closeMenu}
                 >
-                  Nova Página
+                  Register
                 </a>
               </li>
             </ul>
           </div>
         )}
-        {/* Botões de login e criar conta apenas para dispositivos maiores */}
         <Link href="/" passHref>
-          <button className="hidden md:inline-block mr-2 px-4 py-2 rounded-lg  bg-black hover:bg-[#0a091d] text-white">
+          <button className="hidden sm:inline-block mr-2 px-4 py-2 rounded-lg  bg-black hover:bg-[#0a091d] text-white">
             Login
           </button>
         </Link>
         <Link href="/" passHref>
-          <button className="hidden md:inline-block px-4 py-2 rounded-lg text-black border-black border-[1px] hover:text-white hover:bg-gray-700">
+          <button className="hidden sm:inline-block px-4 py-2 rounded-lg text-black border-black border-[1px] hover:text-white hover:bg-gray-900">
             Register
           </button>
         </Link>
