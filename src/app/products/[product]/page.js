@@ -85,7 +85,7 @@ export default function Product() {
               BUY NOW
             </button>
 
-            <button className="px-4 py-2 rounded-lg bg-black hover:bg-[#0a091d] text-white">
+            <button className="px-4 py-2 rounded-lg text-black border-black border-[1px] hover:text-white hover:bg-gray-900">
               <IoCartOutline className="inline-block mr-2" />
               ADD TO CART
             </button>
