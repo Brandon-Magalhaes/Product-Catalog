@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Catálogo de Produtos com Next.js
 
-## Getting Started
+## Objetivo
 
-First, run the development server:
+Este projeto visa avaliar a capacidade de desenvolver uma aplicação frontend utilizando Next.js, focando em conceitos básicos como roteamento, estilização e consumo de API.
 
-```bash
+## Descrição do Projeto
+
+Este é um catálogo de produtos simples onde os usuários podem visualizar uma lista de produtos e detalhes de um produto individual.
+
+## Tecnologias Utilizadas
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Icons](https://react-icons.github.io/react-icons)
+- [Fake Store API](https://fakestoreapi.com/)
+
+## Funcionalidades
+
+- **Página Inicial (/)**: Lista todos os produtos com a possibilidade de pesquisa por nome.
+- **Página de Produto (/product/[id])**: Exibe detalhes de um produto individual.
+- **Roteamento Dinâmico**: Implementação de rotas dinâmicas para acessar os detalhes dos produtos.
+- **Consumo de API**: Consumo de API pública para obter a lista de produtos e os detalhes de cada produto.
+- **Estilização Responsiva**: Utilização de Tailwind CSS para um layout responsivo e moderno.
+
+## Estrutura do Projeto
+
+.
+├── src
+│ ├── app
+│ │ ├── components
+│ │ │ ├── Header.js
+│ │ ├── pages
+│ │ │ ├── index.js
+│ │ │ ├── product
+│ │ │ │ └── [id].js
+│ ├── utils
+│ │ ├── api.js
+├── styles
+│ ├── globals.css
+├── public
+│ ├── images
+│ │ └── ...
+├── README.md
+└── next.config.js
+
+## Configuração e Execução
+
+Siga as instruções abaixo para configurar e executar o projeto localmente.
+
+### Pré-requisitos
+
+- Node.js (v14 ou superior)
+- npm ou yarn
+
+### Passo a Passo
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/Brandon-Magalhaes/Product-Catalog.git
+   cd Product-Catalog
+   ```
+
+## Instale as dependências
+
+npm install
+
+# ou
+
+yarn install
+
+## Execute o servidor de desenvolvimento
+
 npm run dev
-# or
+
+# ou
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Abra o navegador
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+http://localhost:3000 para ver o resultado.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## API
 
-## Learn More
+Utiliza a Fake Store API para obter dados de produtos.
 
-To learn more about Next.js, take a look at the following resources:
+## Endpoints Utilizados
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    GET /products - Lista todos os produtos
+    GET /products/{id} - Detalhes de um produto específico
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Componentes
+Header
 
-## Deploy on Vercel
+Barra de navegação com links para Login e Register.
+Home
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Página inicial que lista os produtos e permite a busca por nome.
+Product
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Página de detalhes de um produto.
+Estilização
+
+Utiliza Tailwind CSS para estilização dos componentes e layout responsivo.
+Autor
+
+    Brandon Magalhães
+
+Licença
+
+Este projeto está licenciado sob a licença MIT.
