@@ -1,10 +1,10 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import { fetchProducts } from "../../src/app/utils/api";
 import Link from "next/link";
 import Header from "../../src/app/components/Header";
 import Image from "next/image";
+import { IoIosSearch } from "react-icons/io";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -40,24 +40,37 @@ export default function Home() {
   }
 
   return (
-    <div className="w-full min-h-screen p-4 bg-cream">
+    <div className="w-full min-h-screen">
       <Header />
-      <h1 className="text-3xl mb-4">Products</h1>
-      <input
-        type="text"
-        placeholder="Enter Name"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="mb-4 p-2 border border-gray-400 rounded"
-      />
-      <div className="flex flex-wrap -mx-2">
-        {products.filter(filterProductsByName).map((product) => (
-          <div
-            key={product.id}
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2"
-          >
-            <div className="bg-white p-4 rounded shadow card flex flex-col">
-              <div className="relative w-full h-60 mb-4">
+
+      <div className="container mx-auto py-6 p-4">
+        <div className="w-full">
+          <h1 className="text-3xl font-bold flex justify-center ">Products</h1>
+          <div className="relative my-6">
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:border-black"
+            />
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <IoIosSearch className="text-gray-400" />
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {products.filter(filterProductsByName).map((product) => (
+            <div
+              key={product.id}
+              className="p-2 rounded-lg border-[1px] border-gray h-full flex flex-col"
+            >
+              <div
+                onClick={() => {
+                  window.location.href = `/products/${product.id}`;
+                }}
+                className="cursor-pointer relative w-full h-60 mb-4"
+              >
                 <Image
                   src={product.image}
                   alt={product.title}
@@ -65,22 +78,27 @@ export default function Home() {
                   objectFit="contain"
                 />
               </div>
-              <div className="card-content flex-grow">
-                <h2 className="text-xl font-semibold mb-2">{product.title}</h2>
-                <p className="text-gray-700 mb-2">
-                  <strong>Price:</strong>{" "}
-                  <span className="text-black">${product.price}</span>
+              <div className="flex flex-col flex-grow">
+                <h2 className="text-sm font-semibold flex justify-center text-center">
+                  {product.title}
+                </h2>
+                <p className="text-sm text-gray-500 flex justify-center py-4">
+                  {product.category}
                 </p>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mb-2">
-                  Buy
-                </button>
-                <Link href={`/products/${product.id}`}>
-                  <span className="text-blue-500 hover:underline">Details</span>
-                </Link>
+                <p className="text-gray-700">
+                  <span className="text-gray-600 text-base font-bold flex justify-center pb-2">
+                    ${product.price}
+                  </span>
+                </p>
+                <div className="mt-auto">
+                  <button className="bg-black hover:bg-[#0a091d] text-white px-4 py-2 rounded-lg w-full">
+                    Buy
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
