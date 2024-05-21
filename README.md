@@ -25,24 +25,26 @@ Este é um catálogo de produtos simples onde os usuários podem visualizar uma 
 
 ## Estrutura do Projeto
 
-.
-├── src
-│ ├── app
-│ │ ├── components
-│ │ │ ├── Header.js
-│ │ ├── pages
-│ │ │ ├── index.js
-│ │ │ ├── product
-│ │ │ │ └── [id].js
-│ ├── utils
-│ │ ├── api.js
-├── styles
-│ ├── globals.css
-├── public
-│ ├── images
-│ │ └── ...
-├── README.md
-└── next.config.js
+        ```bash
+        .
+        ├── src
+        │ ├── app
+        │ │ ├── components
+        │ │ │ ├── Header.js
+        │ │ ├── pages
+        │ │ │ ├── index.js
+        │ │ │ ├── product
+        │ │ │ │ └── [id].js
+        │ ├── utils
+        │ │ ├── api.js
+        ├── styles
+        │ ├── globals.css
+        ├── public
+        │ ├── images
+        │ │ └── ...
+        ├── README.md
+        └── next.config.js
+        ```
 
 ## Configuração e Execução
 
@@ -90,17 +92,21 @@ Utiliza a Fake Store API para obter dados de produtos.
     GET /products - Lista todos os produtos
     GET /products/{id} - Detalhes de um produto específico
 
-Componentes
-Header
+# Componentes
+
+## Header
 
 Barra de navegação com links para Login e Register.
-Home
+
+## Home
 
 Página inicial que lista os produtos e permite a busca por nome.
-Product
+
+## Product
 
 Página de detalhes de um produto.
-Estilização
+
+## Estilização
 
 Utiliza Tailwind CSS para estilização dos componentes e layout responsivo.
 Autor
