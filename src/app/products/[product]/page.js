@@ -52,14 +52,12 @@ export default function Product() {
           />
         </div>
         <div className="w-full sm:w-auto">
-          <div className="sm:max-w-lg flex flex-col justify-center items-center sm:justify-start sm:items-start">
+          <div className="sm:max-w-lg">
             <h1 className="text-2xl sm:text-3xl font-bold mb-4">
               {product.title}
             </h1>
             <div className="my-4">
-              <div className="text-gray-700 text-center sm:text-start">
-                {product.description}
-              </div>
+              <div className="text-gray-700">{product.description}</div>
             </div>
             <div className="text-gray-700 mb-2">
               <span className="text-base font-semibold mb-2">
@@ -80,7 +78,7 @@ export default function Product() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-2 py-3">
+          <div className="flex flex-col sm:flex-row gap-2 py-3">
             <button className="px-4 py-2 rounded-lg bg-black hover:bg-[#0a091d] text-white">
               BUY NOW
             </button>
@@ -91,10 +89,7 @@ export default function Product() {
             </button>
           </div>
 
-          <Link
-            href="/"
-            className="flex items-center justify-center sm:items-start sm:justify-start"
-          >
+          <Link href="/" className="">
             <span className="text-blue-500 hover:underline">Back</span>
           </Link>
         </div>
