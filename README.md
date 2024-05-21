@@ -25,7 +25,6 @@ Este é um catálogo de produtos simples onde os usuários podem visualizar uma 
 
 ## Estrutura do Projeto
 
-        ```bash
         .
         ├── src
         │ ├── app
@@ -44,7 +43,6 @@ Este é um catálogo de produtos simples onde os usuários podem visualizar uma 
         │ │ └── ...
         ├── README.md
         └── next.config.js
-        ```
 
 ## Configuração e Execução
 
@@ -113,6 +111,6 @@ Autor
 
     Brandon Magalhães
 
-Licença
+## Licença
 
 Este projeto está licenciado sob a licença MIT.
