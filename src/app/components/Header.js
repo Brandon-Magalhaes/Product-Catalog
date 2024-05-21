@@ -36,7 +36,7 @@ export default function Header() {
             <ul className="text-gray-800">
               <li className="mb-2">
                 <a
-                  href="/"
+                  href="/pages/login"
                   className="block px-2 py-1 rounded hover:bg-gray-200"
                   onClick={closeMenu}
                 >
@@ -45,7 +45,7 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/pages/register"
                   className="block px-2 py-1 rounded-lg hover:bg-gray-200"
                   onClick={closeMenu}
                 >
@@ -55,12 +55,12 @@ export default function Header() {
             </ul>
           </div>
         )}
-        <Link href="/" passHref>
+        <Link href="/pages/login" passHref>
           <button className="hidden sm:inline-block mr-2 px-4 py-2 rounded-lg  bg-black hover:bg-[#0a091d] text-white">
             Login
           </button>
         </Link>
-        <Link href="/" passHref>
+        <Link href="/pages/register" passHref>
           <button className="hidden sm:inline-block px-4 py-2 rounded-lg text-black border-black border-[1px] hover:text-white hover:bg-gray-900">
             Register
           </button>

@@ -4,6 +4,7 @@ import { fetchProducts } from "../../src/app/utils/api";
 import Header from "../../src/app/components/Header";
 import Image from "next/image";
 import { IoIosSearch } from "react-icons/io";
+import Link from "next/link";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -98,10 +99,11 @@ export default function Home() {
                     Details
                   </div>
                 </p>
-
-                <button className="bg-black hover:bg-[#0a091d] text-white px-4 py-2 rounded-lg w-full mt-auto">
-                  Buy
-                </button>
+                <Link href="/pages/buy">
+                  <button className="bg-black hover:bg-[#0a091d] text-white px-4 py-2 rounded-lg w-full mt-auto">
+                    Buy
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

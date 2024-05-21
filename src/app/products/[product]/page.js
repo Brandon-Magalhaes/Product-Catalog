@@ -79,14 +79,17 @@ export default function Product() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-2 py-3">
-            <button className="px-4 py-2 rounded-lg bg-black hover:bg-[#0a091d] text-white">
-              BUY NOW
-            </button>
-
-            <button className="px-4 py-2 rounded-lg text-black border-black border-[1px] hover:text-white hover:bg-gray-900">
-              <IoCartOutline className="inline-block mr-2" />
-              ADD TO CART
-            </button>
+            <Link href="/pages/buy">
+              <button className="px-4 py-2 rounded-lg bg-black hover:bg-[#0a091d] text-white w-full">
+                Buy Now
+              </button>
+            </Link>
+            <Link href="/pages/addCart">
+              <button className="px-4 py-2 rounded-lg text-black border-black border-[1px] hover:text-white hover:bg-gray-800 w-full">
+                <IoCartOutline className="inline-block mr-2" />
+                Add To Cart
+              </button>
+            </Link>
           </div>
 
           <Link href="/" className="">
