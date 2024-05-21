@@ -23,27 +23,6 @@ Este é um catálogo de produtos simples onde os usuários podem visualizar uma 
 - **Consumo de API**: Consumo de API pública para obter a lista de produtos e os detalhes de cada produto.
 - **Estilização Responsiva**: Utilização de Tailwind CSS para um layout responsivo e moderno.
 
-## Estrutura do Projeto
-
-        .
-        ├── src
-        │ ├── app
-        │ │ ├── components
-        │ │ │ ├── Header.js
-        │ │ ├── pages
-        │ │ │ ├── index.js
-        │ │ │ ├── product
-        │ │ │ │ └── [id].js
-        │ ├── utils
-        │ │ ├── api.js
-        ├── styles
-        │ ├── globals.css
-        ├── public
-        │ ├── images
-        │ │ └── ...
-        ├── README.md
-        └── next.config.js
-
 ## Configuração e Execução
 
 Siga as instruções abaixo para configurar e executar o projeto localmente.
